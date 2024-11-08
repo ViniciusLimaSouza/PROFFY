@@ -1,0 +1,387 @@
+body {
+    margin: 0;
+    background-color: #F0F4F5; /* cor de fundo da página */
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Evita barra de rolagem horizontal */
+}
+
+/* referente ao header início */
+header {
+    background-color: #00254E;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 20%;
+    margin-left: 20px;
+}
+
+.buttons {
+    display: flex;
+    margin-right: 20px;
+}
+
+.buttons button {
+    background-color: #00254E;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.buttons button:hover {
+    background-color: #005f73;
+}
+
+/* referente ao PESQUISAR início */
+.search-bar {
+    margin-right: px;
+    border-right-width: 10px;
+    border-right-style: solid;
+}
+
+.search-bar > input:nth-child(1) {
+    border-left-width: -22.883px;
+    border-left-style: solid;
+}´
+
+.search {
+    display: flex;
+    border-radius: 10px;
+}
+
+.search__toggle {
+    appearance: none;
+    order: 1;
+    font-size: 0;
+    width: 34px;
+    height: 34px;
+    background: url("../img/header-3/search.svg") center/22px no-repeat;
+    border: 0;
+    border-radius: 10px;
+}
+
+@media (max-width: 679px) {
+    .search__toggle {
+        position: absolute;
+        right: 1rem;
+        top: 0.65rem; 
+    }
+}
+
+.search__toggle.active {
+    background: url("../img/header-5/close.svg") center/22px no-repeat;
+}
+
+@media (min-width: 680px) {
+    .search__toggle {
+        display: none;
+    }
+}
+
+.search__form {
+    display: none;
+}
+
+.search__form.active {
+    display: block;
+}
+
+@media (min-width: 680px) {
+    .search__form {
+        display: block;
+    }
+}
+
+@media (max-width: 679px) {
+    .search__form {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background-color: red;
+        
+    }
+
+    .search__form input {
+        width: 100%;
+    }
+}
+
+.search__form input {
+    min-width: 200px;
+    appearance: none;
+    border: 0;
+    background-color: #fff;
+    border-radius: 0;
+    font-size: 16px;
+    padding: 0.5rem;
+}
+
+@media (max-width: 679px) {
+    .search__form input {
+        border-bottom: 1px solid #979797;
+    }
+}
+/* referente ao PESQUISAR fim */
+
+/* referente ao header fim */
+
+.titulo {
+    background-color: #c7dce5;;
+    color: #000000;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+/* referente ao cardinício */
+.container-card {
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5px;
+}
+
+.container-texto {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5px;
+    overflow: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color:   #A4AFB2;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.card-img {
+    width: 50%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.card-titulo {
+    margin: 10px;
+}
+
+.card-texto {
+    border-radius: 15px;
+    margin: 5px;
+    overflow: hidden;
+    font-size: 18px;
+    text-indent: 2em;
+    text-align: justify;
+    width: 100%;
+}
+
+/* configurações dos botões*/
+.button {
+    background-color: #A4AFB2;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.button:hover {
+    background-color: #b9c8cc;
+}
+/* referente ao card fim */
+
+/* referente ao footer */
+footer {
+    background-color: #00254E;
+    color: white;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.footer-links .section {
+    margin-right: 20px;
+}
+
+.footer-links ul {
+    list-style-type: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+/* Estilo para ocultar o modal inicialmente */
+.modal {
+    display: none; /* O modal começa invisível */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+
+}
+
+/* Estilo do botão de fechar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+  
+.modal-content {
+
+    height: 100%;
+  }
+  
+
+  
+  .modal-content > iframe:nth-child(2) {
+
+    border-bottom-style: solid;
+    height: 700px;
+    height: 100%;
+    margin-top: 0px;
+    width: 100%;
+  }
+  
+
+  
+  .modal-content {
+
+    padding: -13px;
+    max-width: 600px;
+  }
+  
+/* alteracores feitas na web inspeçao*/
+
+body > header:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1) > button:nth-child(1) {
+
+    margin-left: 20px;
+  }
+  
+
+  
+  #search {
+
+    margin-top: 6px;
+  }
+  
+
+.buttons {
+
+    display: block ruby;
+  }
+  
+
+
+.buttons button {
+    color: white;
+  }
+  
+  header {
+
+    color: #242323;
+  }
+
+  
+  #toggleButton {
+
+    background-color: #b1dbff;
+  }
+  
+
+  
+  #itemList {
+
+    background-color: #0072d7;
+    border: 1px solid rgb(200, 200, 200);
+  }
+
+  
+  #itemList > li:nth-child(1) {
+
+    background-color: #a8d6ff;
+  }
+
+  
+  #itemList > li:nth-child(2) {
+
+    background-color: #a8d6ff;
+  }
+  
+
+  
+  #itemList > li:nth-child(3) {
+
+    background-color: #a8d6ff;
+  }
+
+  
+  .search__form input {
+
+    border-radius: 21px;
+  }
+  
